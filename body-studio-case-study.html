@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Interactive Body Studio — Case Study · Angela</title>
+<meta name="description" content="Case study: a custom Blender-based body customization system built with Python to generate and adjust 3D human models." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark"><span class="loader-dot"></span> Angela<span class="mono">.dev</span></div>
+</div>
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div id="scroll-progress"></div>
+
+<header id="site-header">
+  <div class="wrap nav-inner">
+    <a href="angela-portfolio.html#home" class="logo">Angela<span class="dot mono">.</span></a>
+    <nav class="nav-links" id="nav-links" style="position:static; flex-direction:row; background:none; border:none; padding:0; transform:none; opacity:1; visibility:visible;">
+      <a href="angela-portfolio.html#projects">&larr; All Projects</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="wrap">
+      <div class="breadcrumb reveal in">
+        <a href="angela-portfolio.html#home">Home</a><span>/</span>
+        <a href="angela-portfolio.html#projects">Projects</a><span>/</span>
+        <span>Interactive Body Studio</span>
+      </div>
+      <div class="case-tagrow reveal in">
+        <span class="tag">Python</span><span class="tag">Blender API</span><span class="tag">3D Modeling</span><span class="tag">Procedural Generation</span>
+      </div>
+      <h1 class="reveal in">Interactive Body Studio</h1>
+      <p class="dek reveal in">A Python-powered Blender system I developed to generate and customize 3D human models through a dedicated interface — covering body proportions, measurements, clothing, and material customization end to end.</p>
+      <div class="case-actions reveal in">
+        <a href="#demo" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Demo
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 3 1.4 3.7 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <div class="case-hero-media reveal in">
+        <img src="assets/body-studio-male-model.png" alt="Interactive Body Studio interface showing a male 3D model wearing a size-adjustable outfit, with a project overview panel on the right" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I BUILT -->
+  <section class="case-section tight">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:32px;">
+        <span class="eyebrow">// what I built</span>
+        <h2>From an idea to a working 3D tool</h2>
+      </div>
+      <div class="case-body reveal">
+        <p>Interactive Body Studio is a Python-powered Blender system I developed to generate and customize 3D human models through a dedicated interface, rather than manually sculpting each variation by hand.</p>
+        <p>The goal was to turn a handful of inputs — height, weight, and a few key measurements — into a fully proportioned, dressed 3D character, so the system does the modeling work that would otherwise take a person hours inside Blender.</p>
+      </div>
+      <div class="tech-columns reveal-stagger" style="margin-top:36px;">
+        <div class="tech-col reveal">
+          <h4><span class="dot"></span>Core functionality</h4>
+          <ul>
+            <li>Male and female base models</li>
+            <li>Adjustable height and weight</li>
+            <li>Adjustable body measurements</li>
+          </ul>
+        </div>
+        <div class="tech-col reveal">
+          <h4><span class="dot"></span>Customization</h4>
+          <ul>
+            <li>Procedural body modifications</li>
+            <li>Clothing selection and fitting</li>
+            <li>Multiple clothing sizes</li>
+          </ul>
+        </div>
+        <div class="tech-col reveal">
+          <h4><span class="dot"></span>System</h4>
+          <ul>
+            <li>Skin and material customization</li>
+            <li>Automated model creation</li>
+            <li>Blender Python API integration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="case-section tight" style="background:var(--bg-sunken); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:32px;">
+        <span class="eyebrow">// gallery</span>
+        <h2>Inside the studio</h2>
+        <p>A visual walkthrough of the interface — more real captures can slot into the placeholders below as they're taken.</p>
+      </div>
+      <div class="gallery-grid reveal-stagger">
+        <div class="gallery-item reveal">
+          <img src="assets/body-studio-male-model.png" alt="Male model with adjustable outfit shown in the Interactive Body Studio panel" loading="lazy">
+          <div class="cap"><span class="idx mono">01</span><span class="txt">Body Generation &amp; Clothing System</span></div>
+        </div>
+        <div class="gallery-item placeholder reveal">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+          <div class="cap"><span class="idx mono">02</span><span class="txt">Measurements — add a screenshot</span></div>
+        </div>
+        <div class="gallery-item placeholder reveal">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+          <div class="cap"><span class="idx mono">03</span><span class="txt">Female model — add a screenshot</span></div>
+        </div>
+        <div class="gallery-item placeholder reveal">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+          <div class="cap"><span class="idx mono">04</span><span class="txt">3D Visualization — add a screenshot</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="case-section">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:8px;">
+        <span class="eyebrow">// how it works</span>
+        <h2>Architecture</h2>
+        <p>The Blender UI collects inputs; a Python engine underneath handles generation, proportion, and clothing logic before handing back a finished model.</p>
+      </div>
+
+      <div class="arch-split reveal-stagger">
+        <div class="arch-col reveal">
+          <h4>BLENDER UI</h4>
+          <ul>
+            <li>Height</li>
+            <li>Weight</li>
+            <li>Measurements</li>
+            <li>Clothing</li>
+            <li>Skin</li>
+          </ul>
+        </div>
+        <div class="arch-col reveal">
+          <h4>PYTHON ENGINE</h4>
+          <ul>
+            <li>Body generation</li>
+            <li>Proportion modifiers</li>
+            <li>Clothing management</li>
+            <li>Model transformation</li>
+            <li>Scene management</li>
+          </ul>
+        </div>
+      </div>
+      <div class="arch-diagram reveal">
+        <div class="arch-arrow">↓</div>
+        <div class="arch-node accent">3D Human Model<span>Fully generated, dressed, and ready to view</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL IMPLEMENTATION -->
+  <section class="case-section tight" style="background:var(--bg-sunken); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:32px;">
+        <span class="eyebrow">// technical implementation</span>
+        <h2>What's under the hood</h2>
+      </div>
+      <div class="tech-columns reveal-stagger">
+        <div class="tech-col reveal">
+          <h4><span class="dot"></span>Python</h4>
+          <ul>
+            <li>Blender Python API</li>
+            <li>Custom operators</li>
+            <li>Custom scene properties</li>
+            <li>Automated object &amp; collection management</li>
+          </ul>
+        </div>
+        <div class="tech-col reveal">
+          <h4><span class="dot"></span>3D</h4>
+          <ul>
+            <li>Mesh manipulation</li>
+            <li>Vertex groups</li>
+            <li>Modifiers</li>
+            <li>Shape keys</li>
+            <li>Clothing fitting</li>
+          </ul>
+        </div>
+        <div class="tech-col reveal">
+          <h4><span class="dot"></span>System</h4>
+          <ul>
+            <li>Dynamic body parameters</li>
+            <li>Gender-specific configuration</li>
+            <li>Clothing management</li>
+            <li>Automated model generation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section class="case-section tight" id="demo">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:20px;">
+        <span class="eyebrow">// demo</span>
+        <h2>Watch it in action</h2>
+      </div>
+      <div class="gallery-item reveal" style="max-width:720px;">
+        <div style="position:relative; width:100%; padding-top:56.25%; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border);">
+          <iframe loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
+            src="https://www.canva.com/design/DAHRs3_WKjk/H22M6j13ugVfVuQlateZQA/watch?embed"
+            allow="fullscreen" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="cap"><span class="txt">A walkthrough of the model, proportions, and clothing system in action.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="case-section tight">
+    <div class="wrap">
+      <div class="case-cta reveal">
+        <div>
+          <h3>Curious about the code?</h3>
+          <p>The full Blender Python source is on GitHub, including the custom operators and scene properties.</p>
+        </div>
+        <a href="#" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub</a>
+      </div>
+      <div class="next-project reveal">
+        <span class="label">NEXT PROJECT</span>
+        <a href="youtube-similar-creators-case-study.html">YouTube Similar Creators →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>&copy; <span id="year"></span> Angela. Built from scratch, line by line.</span>
+      <a href="angela-portfolio.html#home">Back to portfolio</a>
+    </div>
+  </div>
+</footer>
+
+<button id="fab-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script src="shared.js"></script>
+</body>
+</html>
