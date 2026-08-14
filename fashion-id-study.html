@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>YouTube Similar Creators — Case Study · Angela</title>
-<meta name="description" content="Case study: a Python data analysis project that finds similar YouTube creators using TF-IDF and cosine similarity." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion ID — Case Study · Angela</title>
+  <meta name="description" content="Case study: a Python data analysis project that finds similar YouTube creators using TF-IDF and cosine similarity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -42,21 +42,24 @@
       <div class="breadcrumb reveal in">
         <a href="index.html#home">Home</a><span>/</span>
         <a href="index.html#projects">Projects</a><span>/</span>
-        <span>YouTube Similar Creators</span>
+        <span>Fashion ID</span>
       </div>
       <div class="case-tagrow reveal in">
-        <span class="tag">Data Analysis</span><span class="tag">Python</span><span class="tag">YouTube API</span><span class="tag">Machine Learning</span>
+        <span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">Machine Learning</span>
       </div>
-      <h1 class="reveal in">YouTube Similar Creators</h1>
-      <p class="dek reveal in">A Python-based data analysis project that identifies similarities between YouTube channels using subscriber counts, video titles, and audience engagement — retrieved through the YouTube Data API and compared with TF-IDF and cosine similarity.</p>
+      <h1 class="reveal in">Fashion ID</h1>
+      <p class="dek reveal in">A computer vision project that detects fashion brand logos in images using
+        object detection. Built with Python and YOLO, the project explores how
+        machine learning can transform visual fashion content into identifiable
+        brand information.</p>
       <div class="case-actions reveal in">
-        <a href="https://github.com/angelaalexo/VNP-standard-project-211256" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="https://github.com/angelaalexo/fashion-id" target="_blank" rel="noopener" class="btn btn-primary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 3 1.4 3.7 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
           View on GitHub
         </a>
       </div>
       <div class="case-hero-media reveal in">
-        <img src="assets/youtube_similar_creators_cover.jpg" alt="YouTube Similar Creators dashboard showing a channel similarity matrix, top similar channels, and engagement overview" loading="lazy">
+        <img src="assets/fashion_id.png" alt="Fashion ID computer vision project showing detected fashion brand logos" loading="lazy">
       </div>
     </div>
   </section>
@@ -66,14 +69,32 @@
     <div class="wrap">
       <div class="section-head reveal" style="margin-bottom:24px;">
         <span class="eyebrow">// what I built</span>
-        <h2>Finding the channels that behave alike</h2>
+        <h2>Teaching a model to recognize fashion brands</h2>
       </div>
       <div class="case-body reveal">
-        <p>Recommendation and discovery on YouTube usually rely on the platform's own black-box algorithm. I wanted to see what a transparent, from-scratch version could look like: given a set of channels, which ones are actually similar — not by category label, but by what they publish and how their audience responds?</p>
-        <p>The project pulls channel and video data directly through the YouTube Data API, processes it into comparable features, and scores every channel pair using TF-IDF over video titles combined with cosine similarity — surfacing a ranked list of the most similar creators to any channel in the set.</p>
+        <p>Fashion imagery contains a huge amount of visual information, but
+          identifying the brands appearing in an image is often something that
+          still requires manual recognition. Fashion ID explores how computer
+          vision can automate that process by detecting recognizable fashion
+          logos directly from images.</p>
+        <p>The project uses a YOLO-based object detection pipeline to locate
+          fashion logos within an image and identify the detected brand. I worked
+          with a large logo dataset, prepared the annotations for training, and
+          built the processing pipeline needed to turn raw image data into a
+          format suitable for machine learning.</p>
+        <p>
+          The result is a foundation for an image-based fashion recognition
+          system: provide an image, run the trained model, and receive
+          predictions showing where recognizable brand logos appear.
+        </p>
       </div>
       <div class="stack-row reveal">
-        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">YouTube API</span>
+        <span class="tag">Python</span>
+        <span class="tag">YOLO</span>
+        <span class="tag">OpenCV</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">FastAPI</span>
       </div>
     </div>
   </section>
@@ -81,41 +102,83 @@
   <!-- HOW IT WORKS -->
   <section class="case-section" style="background:var(--bg-sunken); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="wrap">
+
       <div class="section-head reveal" style="margin-bottom:8px;">
+
         <span class="eyebrow">// how it works</span>
-        <h2>Pipeline</h2>
-        <p>Raw channel data goes in one end; a ranked similarity table comes out the other.</p>
+
+        <h2>Computer vision pipeline</h2>
+
+        <p>
+          From raw fashion images and annotations to detected brand logos.
+        </p>
+
       </div>
+
 
       <div class="arch-diagram reveal-stagger">
-        <div class="arch-node reveal">YouTube Data API<span>Channel &amp; video metadata pulled per creator</span></div>
+
+        <div class="arch-node reveal">
+          Fashion Images
+          <span>
+            Images containing clothing, products, and visible brand logos
+          </span>
+        </div>
+
         <div class="arch-arrow">↓</div>
-        <div class="arch-node reveal">Channel &amp; Video Data<span>Subscriber counts, titles, engagement</span></div>
+
+
+        <div class="arch-node reveal">
+          Dataset Preparation
+          <span>
+            Processing images and converting annotations into a training-ready format
+          </span>
+        </div>
+
         <div class="arch-arrow">↓</div>
-        <div class="arch-node reveal">Data Processing with Pandas<span>Cleaning, structuring, joining datasets</span></div>
+
+
+        <div class="arch-node reveal">
+          YOLO Object Detection
+          <span>
+            Training a model to locate and classify fashion brand logos
+          </span>
+        </div>
+
         <div class="arch-arrow">↓</div>
-        <div class="arch-node reveal">Feature Extraction<span>Turning video titles and stats into vectors</span></div>
+
+
+        <div class="arch-node reveal">
+          Image Inference
+          <span>
+            Running the trained model against previously unseen images
+          </span>
+        </div>
+
         <div class="arch-arrow">↓</div>
-        <div class="arch-node reveal">TF-IDF / Cosine Similarity<span>Scoring how alike each channel pair is</span></div>
+
+
+        <div class="arch-node reveal">
+          Detection Results
+          <span>
+            Bounding boxes, predicted brands, and confidence scores
+          </span>
+        </div>
+
         <div class="arch-arrow">↓</div>
-        <div class="arch-node accent reveal">Similarity Results<span>Ranked list of the most similar channels</span></div>
+
+
+        <div class="arch-node accent reveal">
+          Fashion ID
+          <span>
+            Turning visual content into identifiable fashion-brand information
+          </span>
+        </div>
+
       </div>
+
     </div>
   </section>
-
-  <!-- RESULTS
-  <section class="case-section tight">
-    <div class="wrap">
-      <div class="section-head reveal" style="margin-bottom:20px;">
-        <span class="eyebrow">// results</span>
-        <h2>What it produces</h2>
-        <p>Across 8 channels, the project analyzed 80+ videos and 10K+ comments to build a full similarity matrix and an engagement overview — shown below.</p>
-      </div>
-      <div class="results-media reveal">
-        <img src="assets/youtube-similar-creators-dashboard.png" alt="Channel similarity matrix comparing video-title and engagement similarity across 8 YouTube channels, with top similar channels and engagement totals" loading="lazy">
-      </div>
-    </div>
-  </section> -->
 
   <!-- CTA -->
   <section class="case-section tight">
@@ -125,7 +188,7 @@
           <h3>Want to see the full pipeline?</h3>
           <p>The repository includes the data collection, processing, and similarity-scoring code.</p>
         </div>
-        <a href="https://github.com/angelaalexo/VNP-standard-project-211256" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub</a>
+        <a href="https://github.com/angelaalexo/fashion-id" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub</a>
       </div>
       <div class="next-project reveal">
         <span class="label">NEXT PROJECT</span>
