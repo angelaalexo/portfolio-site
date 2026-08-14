@@ -67,15 +67,7 @@
       <p class="hero-tagline reveal in">Building useful, beautiful digital experiences — from database schema to pixel-perfect interface.</p>
       <div class="hero-actions reveal in">
         <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="assets/Angela_CV.pdf"
-           id="download-cv"
-           class="btn btn-secondary"
-           download>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/>
-          </svg>
-          Download CV
-        </a>
+
       </div>
     </div>
     <div class="hero-visual reveal in">
@@ -84,18 +76,6 @@
       <div class="blob blob3"></div>
       <div class="float-chip c1"><span>&lt;/&gt;</span> Creative problem solver</div>
       <div class="float-chip c2"><span> ⌘</span> Build. Review. Improve.</div>
-      <div class="avatar-frame">
-        <svg viewBox="0 0 200 200" fill="none">
-          <defs>
-            <linearGradient id="avatarGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#5B4FE9"/><stop offset="1" stop-color="#C084FC"/>
-            </linearGradient>
-          </defs>
-          <circle cx="100" cy="78" r="38" fill="url(#avatarGrad)" opacity="0.16"/>
-          <circle cx="100" cy="78" r="30" fill="url(#avatarGrad)"/>
-          <path d="M40 190c6-46 30-64 60-64s54 18 60 64" fill="url(#avatarGrad)" opacity="0.85"/>
-        </svg>
-      </div>
     </div>
   </div>
   <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
@@ -407,17 +387,6 @@
      Loader, theme toggle, nav, cursor, reveal, bars, and counters
      all live in shared.js so every page can reuse them. */
   const CONFIG = Object.assign({ cvUrl: "#" }, window.SITE_CONFIG || {});
-
-  /* ---------------- Download CV ---------------- */
-  const cvBtn = document.getElementById("download-cv");
-  if (cvBtn) {
-    cvBtn.addEventListener("click", (e) => {
-      if (CONFIG.cvUrl === "#") {
-        e.preventDefault();
-        alert("Add your CV file and update CONFIG.cvUrl in shared.js to enable this button.");
-      }
-    });
-  }
 
   /* ---------------- Project filter + search ---------------- */
   const filterRow = document.getElementById("filter-row");
